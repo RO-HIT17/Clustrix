@@ -1,32 +1,25 @@
-# Turborepo react-native starter
+# [Next.js Example](https://www.nextjs.org/)
 
-This is an official starter Turborepo.
+<p>
+  <!-- Web -->
+  <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
+</p>
 
-## Using this example
+This demo shows you how to setup your Next.js website to use packages from the Expo SDK like Camera, Gestures, Permissions, etc... Refer to the [Next adapter docs](https://github.com/expo/expo-cli/tree/main/packages/next-adapter) to learn how to add more React Native packages to your Next.js project.
 
-Run the following command:
+### 🏁 New Commands
 
-```sh
-npx create-turbo@latest -e with-react-native-web
-```
+When targeting web, you'll need to use the Next.js CLI instead of Expo CLI:
 
-## What's inside?
+- **Starting web**
 
-This Turborepo includes the following packages/apps:
+  - 🚫 `yarn expo`
+  - ✅ `yarn next`
 
-### Apps and Packages
+- **Building web**
+  - 🚫 `yarn expo export:web`
+  - ✅ `yarn next build`
 
-- `native`: a [react-native](https://reactnative.dev/) app built with [expo](https://docs.expo.dev/)
-- `web`: a [Next.js](https://nextjs.org/) app built with [react-native-web](https://necolas.github.io/react-native-web/)
-- `@repo/ui`: a stub [react-native](https://reactnative.dev/) component library shared by both `web` and `native` applications
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+### 👀 More Info
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [Expo](https://docs.expo.dev/) for native development
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [Prettier](https://prettier.io) for code formatting
+- [Next Adapter repo](https://github.com/expo/expo-cli/tree/main/packages/next-adapter)
