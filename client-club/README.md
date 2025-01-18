@@ -1,25 +1,36 @@
-# [Next.js Example](https://www.nextjs.org/)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-<p>
-  <!-- Web -->
-  <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-</p>
+## Getting Started
 
-This demo shows you how to setup your Next.js website to use packages from the Expo SDK like Camera, Gestures, Permissions, etc... Refer to the [Next adapter docs](https://github.com/expo/expo-cli/tree/main/packages/next-adapter) to learn how to add more React Native packages to your Next.js project.
+First, run the development server:
 
-### 🏁 New Commands
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-When targeting web, you'll need to use the Next.js CLI instead of Expo CLI:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- **Starting web**
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-  - 🚫 `yarn expo`
-  - ✅ `yarn next`
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- **Building web**
-  - 🚫 `yarn expo export:web`
-  - ✅ `yarn next build`
+## Learn More
 
-### 👀 More Info
+To learn more about Next.js, take a look at the following resources:
 
-- [Next Adapter repo](https://github.com/expo/expo-cli/tree/main/packages/next-adapter)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
