@@ -104,11 +104,6 @@ export default {
   				}
   			},
 			  scroll: {
-				to: {
-				  transform: "translate(calc(-50% - 0.5rem))",
-				},
-			  },
-			  scroll: {
 				'0%': { transform: 'translateX(0)' },
 				'100%': { transform: 'translateX(calc(-100% - 1rem))' },
 			  },

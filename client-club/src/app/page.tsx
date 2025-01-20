@@ -5,10 +5,11 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { Hero } from "@/components/ui/animated-hero";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import { Spotlight } from "@/components/ui/spotlight";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { Button } from "@/components/ui/button";
 import { MoveRight, Search, Calendar, Users, BarChart, BookOpen, Share2 } from "lucide-react";
-
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import { Cover } from "@/components/ui/cover";  
 export default function LandingPage() {
   const projects = [
     {
@@ -84,7 +85,7 @@ export default function LandingPage() {
         <section className="relative py-20">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl font-bold text-center text-foreground mb-16">
-              Everything You Need to Grow Your Club
+              Everything You Need to <Cover> Grow Your Club </Cover>
             </h2>
             <div className="mt-8">
               <HoverEffect items={projects} />
@@ -95,8 +96,8 @@ export default function LandingPage() {
         <section className="relative py-20">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl font-bold text-center text-foreground mb-16">
-              Loved by Club Leaders
-            </h2>
+            Loved by <Highlight>  Club Leaders </Highlight>
+        </h2>
             <div className="h-[40vh]">
               <InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
             </div>
@@ -104,17 +105,15 @@ export default function LandingPage() {
         </section>
 
         <section className="relative py-20">
-          <Spotlight>
             <div className="max-w-4xl mx-auto text-center px-4">
-              <h3 className="text-4xl font-bold mb-4 text-white">Ready to Get Started?</h3>
-              <p className="text-gray-400 mb-8 text-lg">
+              <h3 className="text-4xl font-bold mb-4 ">Ready to Get Started?</h3>
+              <p className=" mb-8 text-lg">
                 Join the growing community of university clubs
               </p>
               <Button size="lg" className="gap-2">
                 Launch Your Club <MoveRight className="w-4 h-4" />
               </Button>
             </div>
-          </Spotlight>
         </section>
       </div>
     </main>
