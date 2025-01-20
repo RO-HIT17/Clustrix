@@ -5,12 +5,11 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { Hero } from "@/components/ui/animated-hero";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { Button } from "@/components/ui/button";
-import { MoveRight, Search, Calendar, Users, BarChart, BookOpen, Share2, MessageSquare, Users2 } from "lucide-react";
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import { MoveRight, Calendar, Users, BarChart, Share2, MessageSquare, Users2 } from "lucide-react";
+import { Highlight } from "@/components/ui/hero-highlight";
 import { Cover } from "@/components/ui/cover";  
-import { SparklesCore } from "@/components/ui/sparkles";
+
 
 export default function LandingPage() {
   const projects = [
