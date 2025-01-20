@@ -69,7 +69,10 @@ export default {
   		animation: {
   			'meteor-effect': 'meteor 5s linear infinite',
   			shimmer: 'shimmer 2s linear infinite',
-  			spotlight: 'spotlight 2s ease .75s 1 forwards'
+  			spotlight: 'spotlight 2s ease .75s 1 forwards',
+			scroll:
+			  "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+			'scroll-reverse': 'scroll-reverse var(--animation-duration, 40s) linear infinite',
   		},
   		keyframes: {
   			meteor: {
@@ -99,7 +102,15 @@ export default {
   					opacity: '1',
   					transform: 'translate(-50%,-40%) scale(1)'
   				}
-  			}
+  			},
+			  scroll: {
+				'0%': { transform: 'translateX(0)' },
+				'100%': { transform: 'translateX(calc(-100% - 1rem))' },
+			  },
+			  'scroll-reverse': {
+				'0%': { transform: 'translateX(calc(-100% - 1rem))' },
+				'100%': { transform: 'translateX(0)' },
+			  },
   		},
   		blur: {
   			xs: '2px'
