@@ -15,37 +15,37 @@ export default function LandingPage() {
       title: "Club Discovery",
       description: "Connect with clubs that match your interests and passions through our smart matching system.",
       link: "/discovery",
-      icon: <Search className="w-6 h-6 text-blue-500" />
+      icon: <Search size={24} className="text-blue-500" />
     },
     {
       title: "Event Hub",
       description: "Create, manage, and promote club events all in one place. Reach more students effortlessly.",
       link: "/events",
-      icon: <Calendar className="w-6 h-6 text-green-500" />
+      icon: <Calendar size={24} className="text-green-500" />
     },
     {
       title: "Community Tools",
       description: "Build lasting connections with members through dedicated communication and engagement tools.",
       link: "/community",
-      icon: <Users className="w-6 h-6 text-purple-500" />
+      icon: <Users size={24} className="text-purple-500" />
     },
     {
       title: "Analytics Dashboard",
       description: "Track your club's growth, member engagement, and event success with detailed insights.",
       link: "/analytics",
-      icon: <BarChart className="w-6 h-6 text-yellow-500" />
+      icon: <BarChart size={24} className="text-yellow-500" />
     },
     {
       title: "Resource Center",
       description: "Access templates, guides, and best practices to run your club more effectively.",
       link: "/resources",
-      icon: <BookOpen className="w-6 h-6 text-red-500" />
+      icon: <BookOpen size={24} className="text-red-500" />
     },
     {
       title: "Collaboration Space",
       description: "Work together seamlessly with other clubs and create inter-club events and initiatives.",
       link: "/collaborate",
-      icon: <Share2 className="w-6 h-6 text-indigo-500" />
+      icon: <Share2 size={24} className="text-indigo-500" />
     },
   ];
 
@@ -94,7 +94,7 @@ export default function LandingPage() {
 
         <section className="relative py-20">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center text-white mb-16">
+            <h2 className="text-4xl font-bold text-center text-foreground mb-16">
               Loved by Club Leaders
             </h2>
             <div className="h-[40vh]">

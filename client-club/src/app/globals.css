@@ -78,7 +78,32 @@ body {
   }
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
 
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(calc(-100% - 1rem));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@layer utilities {
+  .animate-scroll {
+    animation: scroll var(--animation-duration, 40s) linear infinite;
+  }
+  .animate-scroll-reverse {
+    animation: scroll-reverse var(--animation-duration, 40s) linear infinite;
+  }
+}
 
 @layer base {
   * {
