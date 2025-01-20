@@ -96,6 +96,12 @@ body {
   }
 }
 
+@keyframes gradient {
+  0% { transform: translateX(-50%); }
+  50% { transform: translateX(50%); }
+  100% { transform: translateX(-50%); }
+}
+
 @layer utilities {
   .animate-scroll {
     animation: scroll var(--animation-duration, 40s) linear infinite;

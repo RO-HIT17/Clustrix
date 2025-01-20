@@ -7,46 +7,48 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { Button } from "@/components/ui/button";
-import { MoveRight, Search, Calendar, Users, BarChart, BookOpen, Share2 } from "lucide-react";
+import { MoveRight, Search, Calendar, Users, BarChart, BookOpen, Share2, MessageSquare, Users2 } from "lucide-react";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { Cover } from "@/components/ui/cover";  
+import { SparklesCore } from "@/components/ui/sparkles";
+
 export default function LandingPage() {
   const projects = [
     {
-      title: "Club Discovery",
-      description: "Connect with clubs that match your interests and passions through our smart matching system.",
-      link: "/discovery",
-      icon: <Search size={24} className="text-blue-500" />
-    },
-    {
-      title: "Event Hub",
-      description: "Create, manage, and promote club events all in one place. Reach more students effortlessly.",
-      link: "/events",
-      icon: <Calendar size={24} className="text-green-500" />
-    },
-    {
-      title: "Community Tools",
-      description: "Build lasting connections with members through dedicated communication and engagement tools.",
-      link: "/community",
+      title: "Cross-Campus Reach",
+      description: "Connect with students across multiple colleges. Expand your club's visibility and attract passionate members from diverse campuses.",
+      link: "/reach",
       icon: <Users size={24} className="text-purple-500" />
     },
     {
-      title: "Analytics Dashboard",
-      description: "Track your club's growth, member engagement, and event success with detailed insights.",
+      title: "Event Registration",
+      description: "Streamline registration processes with automated waitlists, custom forms, and instant confirmations for all your events.",
+      link: "/registration",
+      icon: <Calendar size={24} className="text-green-500" />
+    },
+    {
+      title: "Event Promotion",
+      description: "Promote your events through targeted channels, social media integration, and our smart recommendation engine.",
+      link: "/promotion",
+      icon: <Share2 size={24} className="text-blue-500" />
+    },
+    {
+      title: "Analytics & Insights",
+      description: "Make data-driven decisions with detailed metrics on attendance, engagement, and member participation trends.",
       link: "/analytics",
       icon: <BarChart size={24} className="text-yellow-500" />
     },
     {
-      title: "Resource Center",
-      description: "Access templates, guides, and best practices to run your club more effectively.",
-      link: "/resources",
-      icon: <BookOpen size={24} className="text-red-500" />
+      title: "Simplified Communication",
+      description: "Keep everyone in the loop with announcement boards, direct messaging, and automated event reminders.",
+      link: "/communication",
+      icon: <MessageSquare size={24} className="text-red-500" />
     },
     {
-      title: "Collaboration Space",
-      description: "Work together seamlessly with other clubs and create inter-club events and initiatives.",
-      link: "/collaborate",
-      icon: <Share2 size={24} className="text-indigo-500" />
+      title: "Student Engagement",
+      description: "Build active communities with polls, feedback systems, and interactive discussion forums.",
+      link: "/engagement",
+      icon: <Users2 size={24} className="text-indigo-500" />
     },
   ];
 

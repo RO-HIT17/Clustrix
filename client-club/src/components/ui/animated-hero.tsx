@@ -1,82 +1,89 @@
+"use client";
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { MoveRight, Sparkles } from "lucide-react";
+import { UserPlus, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
-function Hero() {
+export const Hero = () => {
   const [titleNumber, setTitleNumber] = useState(0);
   const titles = useMemo(
-    () => ["community", "passion", "connection", "adventure", "impact"],
+    () => ["Community", "Connection", "Growth", "Impact", "Excellence"],
     []
   );
+  const letters = "CLUSTRIX".split("");
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      if (titleNumber === titles.length - 1) {
-        setTitleNumber(0);
-      } else {
-        setTitleNumber(titleNumber + 1);
-      }
+      setTitleNumber((prev) => (prev === titles.length - 1 ? 0 : prev + 1));
     }, 2000);
     return () => clearTimeout(timeoutId);
   }, [titleNumber, titles]);
 
   return (
-    <div className="w-full">
-      <div className="container mx-auto">
-        <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
-          <div>
-            <Button variant="secondary" size="sm" className="gap-4">
-              Discover Campus Life <Sparkles className="w-4 h-4" />
-            </Button>
-          </div>
-          <div className="flex gap-4 flex-col">
-            <h1 className="text-5xl md:text-7xl max-w-3xl tracking-tighter text-center font-regular">
-              <span>Find your</span>
-              <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
-                &nbsp;
-                {titles.map((title, index) => (
-                  <motion.span
-                    key={index}
-                    className="absolute font-semibold text-primary"
-                    initial={{ opacity: 0, y: "-100" }}
-                    transition={{ type: "spring", stiffness: 50 }}
-                    animate={
-                      titleNumber === index
-                        ? {
-                            y: 0,
-                            opacity: 1,
-                          }
-                        : {
-                            y: titleNumber > index ? -150 : 150,
-                            opacity: 0,
-                          }
-                    }
-                  >
-                    {title}
-                  </motion.span>
-                ))}
-              </span>
-            </h1>
+    <div className="flex flex-col items-center justify-start pt-10 min-h-[85vh]">
+      {/* Animated Clustrix Title */}
+      <div className="flex space-x-1 md:space-x-2 mb-20">
+        {letters.map((letter, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ 
+              opacity: 1, 
+              y: 0,
+            }}
+            transition={{
+              duration: 0.3,
+              delay: index * 0.1,
+            }}
+            whileHover={{
+              scale: 1.1,
+              transition: { duration: 0.2 }
+            }}
+            className={cn(
+              "text-6xl md:text-8xl font-bold cursor-pointer",
+              "bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500",
+              "hover:from-purple-500 hover:to-blue-500",
+              "transition-colors duration-200"
+            )}
+          >
+            {letter}
+          </motion.div>
+        ))}
+      </div>
 
-            <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center">
-              Connect with university clubs that match your interests, discover exciting 
-              events, and become part of thriving campus communities. Your next great 
-              college experience starts here.
-            </p>
+      {/* Hero Content */}
+      <div className="text-center">
+        <h1 className="text-5xl md:text-7xl font-bold mb-8">
+          Where Campus{" "}
+          <div className="inline-flex h-[80px] overflow-hidden">
+            <motion.div
+              key={titleNumber}
+              initial={{ y: 80 }}
+              animate={{ y: 0 }}
+              exit={{ y: -80 }}
+              transition={{ ease: "easeInOut", duration: 0.5 }}
+              className="bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text"
+            >
+              {titles[titleNumber]}
+            </motion.div>
           </div>
-          <div className="flex flex-row gap-3">
-            <Button size="lg" className="gap-4" variant="outline">
-              Browse Clubs <Sparkles className="w-4 h-4" />
-            </Button>
-            <Button size="lg" className="gap-4">
-              Join Now <MoveRight className="w-4 h-4" />
-            </Button>
-          </div>
+          <br /> Comes Together
+        </h1>
+
+        <p className="text-xl md:text-2xl mb-12 text-muted-foreground max-w-2xl mx-auto">
+          Connect with campus clubs or manage your organization - all in one platform designed for student life
+        </p>
+
+        <div className="flex gap-4 justify-center">
+          <Button size="lg" className="gap-2 bg-gradient-to-r from-purple-500 to-blue-500 hover:opacity-90">
+            <UserPlus className="w-4 h-4" /> Join as Student
+          </Button>
+          <Button size="lg" variant="outline" className="gap-2">
+            <Building2 className="w-4 h-4" /> Register Your Club
+          </Button>
         </div>
       </div>
     </div>
   );
-}
-
-export { Hero };
+};
