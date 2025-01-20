@@ -43,7 +43,7 @@ export const Hero = () => {
             className={cn(
               "text-6xl md:text-8xl font-bold cursor-pointer",
               "bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500",
-              "hover:from-purple-500 hover:to-blue-500",
+              "hover:from-cyan-500 hover:to-blue-500",
               "transition-colors duration-200"
             )}
           >
@@ -63,7 +63,7 @@ export const Hero = () => {
               animate={{ y: 0 }}
               exit={{ y: -80 }}
               transition={{ ease: "easeInOut", duration: 0.5 }}
-              className="bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text"
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text"
             >
               {titles[titleNumber]}
             </motion.div>
@@ -76,7 +76,7 @@ export const Hero = () => {
         </p>
 
         <div className="flex gap-4 justify-center">
-          <Button size="lg" className="gap-2 bg-gradient-to-r from-purple-500 to-blue-500 hover:opacity-90">
+          <Button size="lg" className="gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:opacity-90">
             <UserPlus className="w-4 h-4" /> Join as Student
           </Button>
           <Button size="lg" variant="outline" className="gap-2">
