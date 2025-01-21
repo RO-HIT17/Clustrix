@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { Hero } from "@/components/ui/animated-hero";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
@@ -77,7 +76,7 @@ export default function LandingPage() {
   return (
     <main className="relative min-h-screen bg-background dark:bg-black/[0.96] antialiased overflow-hidden transition-colors">
       <BackgroundBeams className="fixed inset-0 dark:opacity-100 opacity-40" />
-      <ThemeToggle />
+
       
       <div className="relative z-10">
         <Hero />
