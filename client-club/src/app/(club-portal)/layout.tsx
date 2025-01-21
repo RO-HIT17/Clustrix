@@ -73,12 +73,12 @@ export default function ClubPortalLayout({
               key={link.href}
               href={link.href}
               className={cn(
-                "flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-accent/50 transition-colors",
-                pathname === link.href ? "bg-accent text-accent-foreground" : "text-muted-foreground"
+            "flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-accent/50 transition-colors mb-2",
+            pathname === link.href ? "bg-accent text-accent-foreground" : "text-muted-foreground"
               )}>
               <link.icon size={20} className="flex-shrink-0" />
               <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
-                {link.title}
+            {link.title}
               </span>
             </Link>
           ))}
