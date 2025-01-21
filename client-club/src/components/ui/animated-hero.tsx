@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { UserPlus, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export const Hero = () => {
   const [titleNumber, setTitleNumber] = useState(0);
@@ -79,9 +80,11 @@ export const Hero = () => {
           <Button size="lg" className="gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:opacity-90">
             <UserPlus className="w-4 h-4" /> Join as Student
           </Button>
-          <Button size="lg" variant="outline" className="gap-2">
-            <Building2 className="w-4 h-4" /> Register Your Club
-          </Button>
+          <Link href="/register-club">
+            <Button size="lg" variant="outline" className="gap-2">
+              <Building2 className="w-4 h-4" /> Register Your Club
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

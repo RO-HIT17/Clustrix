@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { MoveRight, Calendar, Users, BarChart, Share2, MessageSquare, Users2 } from "lucide-react";
 import { Highlight } from "@/components/ui/hero-highlight";
 import { Cover } from "@/components/ui/cover";  
-
+import Link from "next/link";
 
 export default function LandingPage() {
   const projects = [
@@ -111,9 +111,11 @@ export default function LandingPage() {
               <p className=" mb-8 text-lg">
                 Join the growing community of university clubs
               </p>
-              <Button size="lg" className="gap-2">
-                Launch Your Club <MoveRight className="w-4 h-4" />
-              </Button>
+              <Link href="/register-club">
+                <Button size="lg" className="gap-2">
+                  Launch Your Club <MoveRight className="w-4 h-4" />
+                </Button>
+              </Link>
             </div>
         </section>
       </div>
