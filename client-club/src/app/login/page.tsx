@@ -7,8 +7,10 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { BorderedButton } from "@/components/ui/bordered-button";
+import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -21,12 +23,13 @@ export default function LoginPage() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Login attempt:', formData);
+    router.push('/dashboard');
   };
 
-  const inputClassName = "bg-background text-foreground border-input placeholder:text-muted-foreground hover:border-foreground/30 transition-colors focus:border-primary";
+  const inputClassName = "bg-background text-foreground border-input outline outline-1 outline-border placeholder:text-muted-foreground hover:border-foreground/30 transition-colors focus:border-primary";
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-background">

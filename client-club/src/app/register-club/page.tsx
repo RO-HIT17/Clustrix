@@ -30,7 +30,7 @@ export default function RegisterClub() {
     console.log('Form submitted:', formData);
   };
 
-  const inputClassName = "bg-background text-foreground border-input placeholder:text-muted-foreground hover:border-foreground/30 transition-colors focus:border-primary";
+  const inputClassName = "bg-background text-foreground border-input outline outline-1 outline-border placeholder:text-muted-foreground hover:border-foreground/30 transition-colors focus:border-primary";
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-background">
@@ -64,7 +64,7 @@ export default function RegisterClub() {
                     id="clubName"
                     value={formData.clubName}
                     onChange={handleChange}
-                    placeholder="e.g., Photography Society, Debate Club"
+                    placeholder="e.g., Photography Society"
                     className={inputClassName}
                   />
                 </LabelInputContainer>
@@ -75,7 +75,7 @@ export default function RegisterClub() {
                     id="institution"
                     value={formData.institution}
                     onChange={handleChange}
-                    placeholder="e.g., Stanford University, MIT"
+                    placeholder="e.g., Stanford University"
                     className={inputClassName}
                   />
                 </LabelInputContainer>
@@ -99,7 +99,7 @@ export default function RegisterClub() {
                     id="position"
                     value={formData.position}
                     onChange={handleChange}
-                    placeholder="e.g., President, Club Secretary"
+                    placeholder="e.g., President, Secretary"
                     className={inputClassName}
                   />
                 </LabelInputContainer>
@@ -123,7 +123,7 @@ export default function RegisterClub() {
                   id="description"
                   value={formData.description}
                   onChange={handleChange}
-                  placeholder="e.g., A community of photography enthusiasts organizing workshops and exhibitions"
+                  placeholder="e.g., A community of photography enthusiasts "
                   className={inputClassName}
                 />
               </LabelInputContainer>
